@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <ctype.h>
 
 #define ARGS_ERR "USAGE: monty file\n"
 #define FILE_OPEN_ERR "Error: Can't open file %s\n"
