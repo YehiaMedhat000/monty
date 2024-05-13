@@ -116,6 +116,9 @@ void init_vars(FILE *file);
 void free_vars(void);
 FILE *validate_line(int ac, char **av);
 
+/* execute.c */
+char ***parse_file(FILE *file);
+void wrapper(char *file_name);
 
 /* stack.c */
 stack_t *add_dnodeint(stack_t **head, const int n);
@@ -123,7 +126,7 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
 
 /* utils.c */
-void (*match_code(char *code))(stack_t **stack, unsigned int line_number);
+void (*get_func(char *code))(stack_t **stack, unsigned int line_number);
 int _strcmp(char *p1, char *p2);
 
 #endif /* MONTY_H */
